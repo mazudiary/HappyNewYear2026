@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(rgba(80, 0, 0, 0.85), rgba(80, 0, 0, 0.85)),
+    url("https://images.unsplash.com/photo-1519682337058-a94d519337bc");
+  background-size: cover;
+  background-position: center;
+  font-family: "Dancing Script", cursive;
+}
+
+.cssletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 1rem;
+}
+
+/* LETTER STYLE */
+.letter {
+  display: none;
+  max-width: 650px;
+  width: 100%;
+  background: linear-gradient(#fffaf0, #fff1dc);
+  padding: 2.5rem 1.8rem;
+  margin-top: 2rem;
+  border-radius: 14px;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.15), 0 15px 35px rgba(0, 0, 0, 0.4);
+  animation: fadeUp 0.8s ease;
+}
+
+/* Typing text */
+#typedText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #3a0d0d;
+  white-space: pre-line;
+}
+
+/* Signature */
+.letter cite {
+  display: block;
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  color: #6b1c1c;
+}
+
+/* Close button */
+.closeLetter {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: darkred;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+/* Image */
+.letter-image {
+  margin-top: 2rem;
+}
+
+.letter-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile perfection */
+@media (max-width: 600px) {
+  #typedText {
+    font-size: 1.05rem;
+  }
+
+  .letter {
+    padding: 2rem 1.3rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Envelope / Open button visuals */
+.envelope {
+  position: relative;
+  width: 220px;
+  height: 140px;
+  background: linear-gradient(180deg, #fff2d9, #f7d7b8);
+  border-radius: 10px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45),
+    inset 0 -6px 18px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart {
+  z-index: 4;
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border: none;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff6b81 0%, #ff9a9e 40%, #ffd1a9 100%);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28),
+    inset 0 -6px 12px rgba(255, 255, 255, 0.08);
+  transform: translateY(0);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.06) 30%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.heart:hover,
+.heart:focus {
+  transform: scale(1.06);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.36),
+    inset 0 -6px 14px rgba(255, 255, 255, 0.06);
+  outline: none;
+}
+
+.heart:hover::before,
+.heart:focus::before {
+  transform: translate(-50%, -50%) scale(0.92);
+  opacity: 1;
+}
+
+.heart-text {
+  font-family: "Dancing Script", cursive;
+  font-size: 1rem;
+  color: white;
+  user-select: none;
+}
+
+@media (min-width: 650px) {
+  .envelope {
+    width: 360px;
+    height: 200px;
+  }
+  .heart {
+    width: 140px;
+    height: 140px;
+  }
+  .heart::before {
+    width: 140px;
+    height: 140px;
+  }
+  .heart-text {
+    font-size: 1.6rem;
+  }
+}

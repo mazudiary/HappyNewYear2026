@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Love Letter 💌</title>
+    <link rel="stylesheet" href="./css/love_letter.css" />
+  </head>
+
+  <body>
+    <section class="cssletter">
+      <!-- Envelope -->
+      <div class="envelope" id="envelope">
+        <button class="heart" id="openEnvelope">
+          <span class="heart-text">Open</span>
+        </button>
+        <div class="envelope-flap"></div>
+        <div class="envelope-folds">
+          <div class="envelope-left"></div>
+          <div class="envelope-right"></div>
+          <div class="envelope-bottom"></div>
+        </div>
+      </div>
+
+      <!-- Letter -->
+      <blockquote class="letter center" id="loveLetter">
+        <button class="closeLetter" id="closeLetter">Close</button>
+
+        <!-- Typing container -->
+        <div id="typedText"></div>
+
+        <cite>— Yours, Idiot ❤️</cite>
+
+        <!-- Image -->
+        <div class="letter-image">
+          <img src="./assets/2026.jpg" alt="Our Love" />
+        </div>
+      </blockquote>
+    </section>
+
+    <script src="./js/love_letter.js"></script>
+  </body>
+</html>
