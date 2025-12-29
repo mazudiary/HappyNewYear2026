@@ -15,7 +15,7 @@ Right now, there are almost 200 kilometers between us, but my heart doesn’t fe
 It feels hopeful.
 It feels like a beginning we’ve been preparing for all along.
 
-IN SHAA ALLAH, this is the year we complete our marriage, the year distance finally becomes zero, and the year our “someday” becomes everyday life.
+IN SHAA ALLAH, this is the year we complete our NIKKHA, the year distance finally becomes zero, and the year our “someday” becomes everyday life.
 
 I don’t just dream of living with you I dream of living as your friend, your partner, your safe place, through every joy and every challenge.
 
@@ -54,3 +54,4 @@ closeBtn.addEventListener("click", () => {
   letter.style.display = "none";
   envelope.classList.remove("active");
 });
+
